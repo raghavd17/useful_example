@@ -60,6 +60,8 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Nicescroll jQuery plugin](https://nicescroll.areaaperta.com) - jQuery Plugin for custom scrollbars on mobile and desktop browsers
+* [jQuery Selectric Selectric](http://selectric.js.org/) - Fast, simple and light jQuery plugin to customize HTML selects
+
 
 
 ## Contributing
