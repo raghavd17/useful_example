@@ -1,7 +1,7 @@
-# Simple tab with jQuery plugin
+# Simple toggle with arrows jQuery plugin
 
-This example has the simple tab function with the html data attribute.
-
+This example is for the simple toggle div with up and down arrows.
+Used the scss to write the css.
 
 ### Installing
 A step by step series of examples that tell you have to get a development env running

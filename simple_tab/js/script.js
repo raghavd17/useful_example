@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert('hello');
     $('ul.tabs li').on('click', function() {
         var tab_id = $(this).data('tab');
 
