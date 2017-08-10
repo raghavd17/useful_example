@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+
+	<link rel="stylesheet" href="css/selectric.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery.selectric.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('select.custom_select').selectric({
+				onOpen: function() {
+					$(".selectric-scroll").niceScroll({
+						cursorwidth: "8px",
+						cursorcolor: "#cccccc",
+						railpadding: {
+							top: 5,
+							right: 5,
+							left: 0,
+							bottom: 0
+						},
+						autohidemode: false,
+					}).show();
+					$('.selectric-scroll').getNiceScroll().resize();
+				},
+			});
+		});
+	</script>
+	<style type="text/css">
+		body {
+			height: 9000px;
+			overflow-y: auto;
+		}
+
+		ul li {
+			display: inline-block;
+			list-style: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>This is the Custom Seletbox with <strong> jQuery Selectric Selectric</strong> &amp; Nicescroll jQuery Plugin </h3>
+	<p>Fast, simple and light jQuery plugin to customize HTML selects</p>
+	<p>jQuery Plugin for custom scrollbars on mobile and desktop browsers</p>
+	<a href="http://selectric.js.org/">jQuery Selectric Selectric website </a>
+	<a href="https://nicescroll.areaaperta.com/">Nicescroll jQuery Plugin website </a>
+
+	<ul>
+		<li>
+			<select class="custom_select">
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+	</select>
+
+		</li>
+		<li>
+			<select class="custom_select">
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+		<option>SELECT</option>
+		<option>LATEST</option>
+		<option>ALPHABETICAL</option>
+	</select>
+
+		</li>
+	</ul>
+
+
+
+
+
+
+</body>
+
+</html>
