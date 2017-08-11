@@ -9,13 +9,27 @@ body {
     width: 800px;
     margin: 0 auto;
 }
+
 h3 {
     margin: 0;
     font-size: 20px;
 }
+
 p {
     margin: 0 0 12px 0;
 }
-.filter {
-    display: none;
+
+.select {
+    width: 350px;
+    padding: 8px;
+    &::focus {
+        outline: none;
+    }
+}
+
+.filterable {
+    padding: 10px;    
+    .filter {
+        display: none;
+    }
 }

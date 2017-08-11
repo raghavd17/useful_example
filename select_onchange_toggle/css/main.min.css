@@ -1,2 +1,2 @@
-body{margin-top:100px;font-family:'Trebuchet MS', serif;line-height:1.6;font-size:14px}.container{width:800px;margin:0 auto}h3{margin:0;font-size:20px}p{margin:0 0 12px 0}.filter{display:none}
+body{margin-top:100px;font-family:'Trebuchet MS', serif;line-height:1.6;font-size:14px}.container{width:800px;margin:0 auto}h3{margin:0;font-size:20px}p{margin:0 0 12px 0}.select{width:350px;padding:8px}.select::focus{outline:none}.filterable{padding:10px;border:1px solid rgba(0,0,0,0.2)}.filterable .filter{display:none}
 /*# sourceMappingURL=main.min.css.map */
