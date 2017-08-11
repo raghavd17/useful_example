@@ -29,7 +29,6 @@ p {
 
 .filterable {
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .filterable .filter {
   display: none;
