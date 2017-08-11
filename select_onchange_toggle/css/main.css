@@ -1,0 +1,16 @@
+body {
+  margin-top: 100px;
+  font-family: 'Trebuchet MS', serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.filter {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

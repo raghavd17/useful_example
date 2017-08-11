@@ -1,0 +1,74 @@
+body {
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+// scss mixin as follows 
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+// mixin end here
+// usage example for the perticular input 
+input {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    //  for all the inputs
+    @include placeholder {
+        color: #f00;
+    }
+    &.my_input {
+        @include placeholder {
+            color: green;
+        }
+    }
+}
+
+//  Use less mixin as follows 
+// .placeholder(@rules) {
+//     &::-webkit-input-placeholder {
+//         @rules();
+//     }
+//     &:-moz-placeholder {
+//         @rules();
+//     }
+//     &::-moz-placeholder {
+//         @rules();
+//     }
+//     &:-ms-input-placeholder {
+//         @rules();
+//     }
+// }
+// input {
+//   padding:10px;
+// }
+// .my_input {
+// .placeholder({
+//     color: red;
+//   border:0;
+//   });
+//  }
