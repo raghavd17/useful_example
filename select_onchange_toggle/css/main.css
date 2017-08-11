@@ -19,7 +19,18 @@ p {
   margin: 0 0 12px 0;
 }
 
-.filter {
+.select {
+  width: 350px;
+  padding: 8px;
+}
+.select::focus {
+  outline: none;
+}
+
+.filterable {
+  padding: 10px;
+}
+.filterable .filter {
   display: none;
 }
 

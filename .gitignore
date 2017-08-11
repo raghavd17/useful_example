@@ -2,4 +2,5 @@
 **/.sass-cache/*
 **/node_modules
 **/node_modules/*
+**/**/*.css
 **/**/*.css.map
