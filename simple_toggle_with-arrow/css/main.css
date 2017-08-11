@@ -13,6 +13,8 @@ h1 {
   background: green;
   padding: 8px 15px;
   font-size: 18px;
+  color: #fff;
+  line-height: initial;
 }
 h1 > span {
   float: right;

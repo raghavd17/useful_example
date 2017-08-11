@@ -1,0 +1,47 @@
+body {
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.flex_container {
+    display: flex;
+    align-items: baseline;
+}
+
+.left {
+    margin-right: auto;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.right {
+    width: 30%;
+    border: 1px solid #000;
+}
+
+.promotion {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        list-style: none;
+        border: 1px solid #000;
+        width: 32%;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        h3 {
+            order: 2;
+            @media (min-width: 550px) {
+                order: initial;
+            }
+        }
+    }
+}
