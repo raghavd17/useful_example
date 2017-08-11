@@ -2,11 +2,21 @@ body {
   margin-top: 100px;
   font-family: 'Trebuchet MS', serif;
   line-height: 1.6;
+  font-size: 14px;
 }
 
 .container {
   width: 800px;
   margin: 0 auto;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 12px 0;
 }
 
 .filter {
