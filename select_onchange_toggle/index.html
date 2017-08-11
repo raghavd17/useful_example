@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery: Toggle Element on Select Change</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Selec option to it will show th related content</p>
+        <select class="form-control placeholder" id="filterSelect" name="clients">
+            <option value="select">Select options</option>
+            <option value="all">Display All</option>
+            <option value="14">Client 14</option>
+            <option value="45">Client 45</option>
+            <option value="48">Client 48</option>
+        </select>
+
+        <div class="filterable">
+            <div class="filter" data-client="14">
+                <h3>Hello World</h3>
+                <h4>Client 14</h4>
+            </div>
+            <div class="filter" data-client="45">
+                <h3>Hello World</h3>
+                <h4>Client 45</h4>
+            </div>
+            <div class="filter" data-client="48">
+                <h3>Hello World</h3>
+                <h4>Client 48</h4>
+            </div>
+            <div class="filter" data-client="14">
+                <h3>Hello World</h3>
+                <h4>Client 14</h4>
+            </div>
+            <div class="filter" data-client="48">
+                <h3>Hello World</h3>
+                <h4>Client 48</h4>
+            </div>
+        </div>
+
+    </div>
+    <!-- container -->
+</body>
+
+</html>
