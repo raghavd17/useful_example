@@ -1,0 +1,39 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin-top: 50px;
+  font-family: 'Trebuchet MS', serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.btn.dsb-list-btn,
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: red;
+  background-color: #E6E6E6;
+  border: 1px solid #999;
+  padding: 3px 8px;
+}
+
+/*# sourceMappingURL=main.css.map */

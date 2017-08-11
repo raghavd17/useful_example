@@ -1,2 +1,2 @@
-body{margin-top:100px;font-family:'Trebuchet MS', serif;line-height:1.6}.container{width:800px;margin:0 auto}h1{background:green;padding:8px 15px;font-size:18px}h1>span{float:right}.toggle{display:none;padding:20px;background:yellow}
+body{margin-top:100px;font-family:'Trebuchet MS', serif;line-height:1.6}.container{width:800px;margin:0 auto}h1{background:green;padding:8px 15px;font-size:18px;color:#fff;line-height:initial}h1>span{float:right}.toggle{display:none;padding:20px;background:yellow}
 /*# sourceMappingURL=main.min.css.map */
