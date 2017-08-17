@@ -1,0 +1,28 @@
+body {
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    &.no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+        &>[class^="col-"],
+        &>[class*=" col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+.kitten-box {
+    img {
+        max-width: 100%;
+    }
+}
