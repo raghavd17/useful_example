@@ -19,14 +19,14 @@ grunt sass  - to compile the scss
 
 
 
-### Example 1
+### Example with single border
 
-HTML COde
+HTML Code
 
 ```
 <h1>Heading with single border</h1>
 ```
-SCSS COde
+SCSS Code
 
 ```
 h1 {
@@ -75,14 +75,14 @@ h1 {
 }
 
 ```
-### Example 2
+### Example for double border 
 
-HTML COde
+HTML Code
 
 ```
 <h1 class="double-border">Heading wth double border</h1>
 ```
-SCSS COde
+SCSS Code
 
 ```
 h1 {
