@@ -1,0 +1,56 @@
+body {
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    overflow: hidden;
+    text-align: center;
+    font-size: 22px;
+    font-family: helvetica;
+    font-weight: normal;
+    &:before,
+    &:after {
+        background-color: #f00;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+    &:before {
+        right: 15px;
+        margin-left: -50%;
+    }
+    &:after {
+        left: 15px;
+        margin-right: -50%;
+    }
+}
+
+// double border 
+h1 {
+    &.double-border {
+        font-size: 30px;
+        &:before,
+        &:after {
+            background-color: transparent;
+            // background:yellow;
+            content: "";
+            display: inline-block;
+            height: 5px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+        }
+    }
+}
