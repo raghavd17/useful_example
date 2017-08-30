@@ -12,6 +12,7 @@
 	<script type="text/javascript">
 		$(function() {
 			$('select.custom_select').selectric({
+				
 				onOpen: function() {
 					$(".selectric-scroll").niceScroll({
 						cursorwidth: "8px",
@@ -26,6 +27,7 @@
 					}).show();
 					$('.selectric-scroll').getNiceScroll().resize();
 				},
+ 				desableOnMobile:false
 			});
 		});
 	</script>
