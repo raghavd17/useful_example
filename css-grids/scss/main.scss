@@ -1,0 +1,165 @@
+body {
+	font-family:"helvetica";
+}
+.d {
+    &-grid {
+        display: grid;
+    }
+}
+
+.grid {
+    display: grid;
+    &--12 {
+        grid-gap: 10px;
+        width: 100%;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    &--auto-fill {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    &--auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    &-col-1 {
+        grid-column: span 1;
+    }
+    &-col-2 {
+        grid-column: span 2;
+    }
+    &-col-3 {
+        grid-column: span 3;
+    }
+    &-col-4 {
+        grid-column: span 4;
+    }
+    &-col-5 {
+        grid-column: span 5;
+    }
+    &-col-6 {
+        grid-column: span 6;
+    }
+    &-col-7 {
+        grid-column: span 7;
+    }
+    &-col-8 {
+        grid-column: span 8;
+    }
+    &-col-9 {
+        grid-column: span 9;
+    }
+    &-col-10 {
+        grid-column: span 10;
+    }
+    &-col-11 {
+        grid-column: span 11;
+    }
+    &-col-12 {
+        grid-column: span 12;
+    }
+}
+
+
+.item {
+  padding: 10px;
+	color:#fff;
+  background: violet;
+  text-align: center;		
+} // .item end 
+
+// alignment helper 
+
+.justify {
+    &-self {
+        &-start {
+            justify-self: start;
+        }
+        &-center {
+            justify-self: center
+        }
+        &-end {
+            justify-self: end;
+        }
+        &-end {
+            justify-self: stretch
+        }
+    }
+    &-items {
+        &-start {
+            justify-items: start;
+        }
+        &-center {
+            justify-items: center;
+        }
+        &-end {
+            justify-items: end;
+        }
+        &-stretch {
+            justify-items: stretch;
+        }
+    }
+    &-content {
+        &-start {
+            justify-content: start;
+        }
+        &-center {
+            justify-content: center
+        }
+        &-end {
+            justify-content: end;
+        }
+        &-end {
+            justify-content: stretch
+        }
+    }
+}
+
+.align {
+    &-self {
+        &-start {
+            align-self: start;
+        }
+        &-center {
+            align-self: center
+        }
+        &-end {
+            align-self: end;
+        }
+        &-end {
+            align-self: stretch
+        }
+    }
+    &-items {
+        &-start {
+            align-items: start;
+        }
+        &-center {
+            align-items: center;
+        }
+        &-end {
+            align-items: end;
+        }
+        &-stretch {
+            align-items: stretch;
+        }
+    }
+
+    &-content {
+        &-start {
+            align-content: start;
+        }
+        &-center {
+            align-content: center
+        }
+        &-end {
+            align-content: end;
+        }
+        &-end {
+            align-content: stretch
+        }
+    }
+}
+
+ 
+
+
+
