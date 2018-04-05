@@ -10,7 +10,9 @@ body {
 }
 
 
-// media breakpoints
+// media breakpoints with referance to the bootstrap 4 
+// need to make more device friendly with the following reference
+//http://stephen.io/mediaqueries/iphonex/
 
 $xs-min  : 0em;
 $xs-max: 35.99875em; // 575.98px
