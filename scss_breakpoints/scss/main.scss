@@ -1,0 +1,195 @@
+body {
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+}
+
+.container {
+    max-width:  90%;
+    margin: 0 auto;
+}
+
+
+// media breakpoints
+
+$xs-min  : 0em;
+$xs-max: 35.99875em; // 575.98px
+$sm-min: 36em; // 576px
+$sm-max: 47.99875em; // 767.98px     
+$md-min: 48em; //768px
+$md-max: 61.99875em; //991.98px
+$lg-min: 62em; //992px
+$lg-max: 74.99875em; //1199.98px
+$xl-min: 75em; //1200px
+// ================================
+// ex: @include breakpoint-up(md) {  }
+@mixin breakpoint-up($point) {
+  @if $point == sm {
+    @media (min-width: $sm-min) { @content; }
+  }
+  @if $point == md {
+    @media (min-width: $md-min) { @content; }
+  }
+  @if $point == lg {
+    @media (min-width: $lg-min) { @content; }
+  }
+  @if $point == xl {
+    @media (min-width: $xl-min) { @content; }
+  }
+}
+
+// down breakpoint
+// ex: @include breakpoint-down(md) {  }
+@mixin breakpoint-down($point) {
+  @if $point == xs {
+    @media (max-width: $xs-max) { @content; }
+  }
+  @if $point == sm {
+    @media (max-width: $sm-max) { @content; }
+  }
+  @if $point == md {
+    @media (max-width: $md-max) { @content; }
+  }
+  @if $point == lg {
+    @media (max-width: $lg-max) { @content; }
+  }
+}
+
+
+// ex: @include breakpoint-only(sm) {  }
+@mixin breakpoint-only($point) {
+  @if $point == xs {
+		// Extra small  devices (portrait phones, less than 576px)
+		// @media  (max-width: 576px)
+    @media (max-width: $xs-max) { @content; }
+  }
+  @if $point == sm  {
+		// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) and (max-width: 767.98px)
+    @media (min-width: $sm-min) and (max-width: $sm-max){ @content; }
+  }
+  @if $point == md  {
+		// Medium devices (tablets portrait, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px)
+    @media (min-width: $md-min) and (max-width: $md-max){ @content; }
+  }
+	@if $point == lg  {
+		// Large devices (tablets landscape, desktops, 992px and up)
+//@media (min-width: 992px) and (max-width: 1199.98px)
+    @media (min-width: $lg-min) and (max-width: $lg-max){ @content; }
+  }
+	
+	@if $point == xl  {
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px)
+    @media (min-width: $xl-min) { @content; }
+  }
+}
+// media breakpoint-only mixin end here 
+
+// min - max breakpoint
+// ex: @include breakpoint(md, lg) {  }
+@mixin breakpoint($min, $max) {
+  @if $min == xs and $max == sm {
+    @media (min-width: $xs-min) and (max-width: $xs-max){ @content; }
+  }
+  @if $min == sm and $max == md {
+    @media (min-width: $sm-min) and (max-width: $md-max){ @content; }
+  }
+  @if $min == md and $max == lg {
+    @media (min-width: $md-min) and (max-width: $lg-max){ @content; }
+  }
+}
+// media breakpoint mixin end here 
+
+body {
+	& h1 {
+       display:none; 
+    }
+	@include breakpoint-only(xs) {
+		h1.xs-only {
+			display:block;
+		}
+  }
+	@include breakpoint-only(sm) {
+		h1.sm-only {
+			display:block;
+		}
+  }
+		@include breakpoint-only(md) {
+		h1.md-only {
+			display:block;
+		}
+  }
+	@include breakpoint-only(lg) {
+		h1.lg-only {
+			display:block;
+		}
+  }
+  
+	@include breakpoint(md, lg) {
+    background:green;
+  }
+
+     
+  @include breakpoint-down(xs) {
+   // background:red;
+		& h1 {
+			display:none;
+			&.xs {
+       display:block; 
+    	}
+		}
+  }
+  
+   @include breakpoint-up(sm) {
+   background:yellow;
+     & h1 {
+       display:none;
+			 &.sm {
+       display:block; 
+    	}
+    }
+  }
+
+  @include breakpoint-down(sm) {
+      & h1 {
+        display:none;
+              &.sm-down {
+        display:block; 
+         }
+     }
+   }
+  
+   @include breakpoint-up(md) {
+    background:green;
+     & h1 {
+       display:none; 
+			 &.md {
+       display:block; 
+    	}
+    }
+   
+  }  
+	// large screen and up
+	@include breakpoint-up(lg) {
+    background:green;
+     & h1 {
+       display:none;
+			 &.lg {
+       display:block; 
+    }
+    }
+
+  }  
+	// large screen and up
+	@include breakpoint-up(xl) {
+    background:green;
+     & h1 {
+       display:none; 
+			 &.xl {
+				 display:block;
+			 }
+    }
+  }
+}
