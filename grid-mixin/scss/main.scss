@@ -1,0 +1,68 @@
+body {
+  margin-top: 50px;
+  font-family: 'Trebuchet MS', serif;
+  line-height: 1.6
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+// This is mixin which you will include in parent
+// of columns. It kills default margin of inline-block
+// elements.
+@mixin grid () {
+  display: -ms-grid;
+  display: grid;
+}
+
+// This is column mixins.
+@mixin col ($cols, $gap: 1em, $align: start) {
+  width: 100%;
+  grid-gap: $gap;
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+  -ms-grid-columns: (1fr)[$cols];
+  grid-template-columns: repeat($cols, 1fr);
+}
+
+.fluid {
+  width: 100%;
+}
+// Make sure you have this in your styles
+// because grid is using paddings
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.features {
+  @include grid;
+  @include col(1);
+  @media only screen and (min-width: 768px) {
+    @include col(3);
+  }
+}
+
+.products {
+  @include grid;
+  background: #eee;
+  @include col(3, $align: center);
+}
+
+.compare {
+  @include grid;
+  @include col(2, $align: start);
+  @media only screen and (min-width: 768px) {
+    @include col(3, $align: start);
+  }
+}
