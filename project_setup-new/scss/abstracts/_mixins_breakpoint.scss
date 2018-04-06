@@ -1,0 +1,123 @@
+// media breakpoints with referance to the bootstrap 4 
+// need to make more device friendly with the following reference
+//http://stephen.io/mediaqueries/iphonex/
+$xs-min:      0em;
+$xs-max:      35.99875em;     // 575.98px
+$sm-min:      36em;           // 576px
+$sm-max:      47.99875em;     // 767.98px     
+$md-min:      48em;           //768px
+$md-max:      61.99875em;     //991.98px
+$lg-min:      62em;           //992px
+$lg-max:      74.99875em;     //1199.98px
+$xl-min:      75em;           //1200px
+// ================================
+// ex: @include breakpoint-up(md) {  }
+@mixin breakpoint-up($point) {
+    @if $point==sm {
+        @media (min-width: $sm-min) {
+            @content;
+        }
+    }
+    @if $point==md {
+        @media (min-width: $md-min) {
+            @content;
+        }
+    }
+    @if $point==lg {
+        @media (min-width: $lg-min) {
+            @content;
+        }
+    }
+    @if $point==xl {
+        @media (min-width: $xl-min) {
+            @content;
+        }
+    }
+}
+
+// down breakpoint
+// ex: @include breakpoint-down(md) {  }
+@mixin breakpoint-down($point) {
+    @if $point==xs {
+        @media (max-width: $xs-max) {
+            @content;
+        }
+    }
+    @if $point==sm {
+        @media (max-width: $sm-max) {
+            @content;
+        }
+    }
+    @if $point==md {
+        @media (max-width: $md-max) {
+            @content;
+        }
+    }
+    @if $point==lg {
+        @media (max-width: $lg-max) {
+            @content;
+        }
+    }
+}
+
+// ex: @include breakpoint-only(sm) {  }
+@mixin breakpoint-only($point) {
+    @if $point==xs {
+        // Extra small  devices (portrait phones, less than 576px)
+        // @media  (max-width: 576px)
+        @media (max-width: $xs-max) {
+            @content;
+        }
+    }
+    @if $point==sm {
+        // Small devices (landscape phones, 576px and up)
+        //@media (min-width: 576px) and (max-width: 767.98px)
+        @media (min-width: $sm-min) and (max-width: $sm-max) {
+            @content;
+        }
+    }
+    @if $point==md {
+        // Medium devices (tablets portrait, 768px and up)
+        // @media (min-width: 768px) and (max-width: 991.98px)
+        @media (min-width: $md-min) and (max-width: $md-max) {
+            @content;
+        }
+    }
+    @if $point==lg {
+        // Large devices (tablets landscape, desktops, 992px and up)
+        //@media (min-width: 992px) and (max-width: 1199.98px)
+        @media (min-width: $lg-min) and (max-width: $lg-max) {
+            @content;
+        }
+    }
+    @if $point==xl {
+        // Extra large devices (large desktops, 1200px and up)
+        //@media (min-width: 1200px)
+        @media (min-width: $xl-min) {
+            @content;
+        }
+    }
+}
+
+// media breakpoint-only mixin end here 
+// min - max breakpoint
+// ex: @include breakpoint(md, lg) {  }
+@mixin breakpoint($min, $max) {
+    @if $min==xs and $max==sm {
+        @media (min-width: $xs-min) and (max-width: $xs-max) {
+            @content;
+        }
+    }
+    @if $min==sm and $max==md {
+        @media (min-width: $sm-min) and (max-width: $md-max) {
+            @content;
+        }
+    }
+    @if $min==md and $max==lg {
+        @media (min-width: $md-min) and (max-width: $lg-max) {
+            @content;
+        }
+    }
+}
+
+// media breakpoint mixin end here

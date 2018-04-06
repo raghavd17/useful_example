@@ -1,0 +1,131 @@
+// set the initial em base
+$em-base              : 14px;
+
+// colors
+$white                : #fff;
+
+
+// Custom color for the site 
+$primary-pink         : #f37491;
+$primary-pink-dark    : #db6984;
+$primary-black        : #191919;
+$primary-gray-dary    : #666666;
+$primary-gray         : #b2b2b2;
+$primary-gray-light   : #e6e7e8;
+$primary-green        : #2e7d32;
+$primary-blue        : #01579b;
+
+$headings-color       : $primary-black;
+$font-size-base       : 14px;
+$font-size-16         : 16px;
+$font-size-18         : 18px;
+$font-size-20         : 20px;
+$font-size-22         : 22px;
+$font-weight-base     : normal;
+$line-height-base     : 1.5;
+$body-color           : $primary-black;
+// By default, `<body>` has no `background-color` so we set one as a best practice.
+$body-bg              : $white;
+
+
+
+
+$font-family-body                 : 'oswaldregular', sans-serif;
+
+$font-family-oswaldbold           : 'oswaldbold', sans-serif;
+
+$font-family-oswaldextralight     : 'oswaldextralight', sans-serif;
+
+$font-family-oswaldlight          : 'oswaldlight', sans-serif;
+
+$font-family-oswaldmedium         : 'oswaldmedium', sans-serif;
+
+$font-family-oswaldsemibold       : 'oswaldsemibold', sans-serif;
+
+// headeing font family 
+$font-family-heading              : $font-family-oswaldmedium;
+
+
+//source path 
+$font_path                          : "../fonts/oswald";
+$img_path                           : "../images";
+$icon-font_path                     : "../fonts/c-icons";
+
+// font face
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('#{$font_path}/oswald-bold-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'oswaldextralight';
+    src: url('#{$font_path}/oswald-extralight-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldlight';
+    src: url('#{$font_path}/oswald-light-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldmedium';
+    src: url('#{$font_path}/oswald-medium-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('#{$font_path}/oswald-regular-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldsemibold';
+    src: url('#{$font_path}/oswald-semibold-webfont.woff2') format('woff2'),
+         url('#{$font_path}/oswald-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+$font-size-h1 : 2rem;
+$font-size-h2 : 1.8rem;
+$font-size-h3 : 1.5rem;
+$font-size-h4 : 1.2rem;
+$font-size-h5 : 1rem;
+$font-size-h6 : 0.8rem;
+// z-index
+// usage - z-index: z-index(default);
+$z-index: ( default :1, modal :999, navbar-toggle :10, navbar :9, cart-summary: 2);

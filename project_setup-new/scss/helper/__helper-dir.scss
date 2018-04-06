@@ -1,0 +1,9 @@
+
+// @import 'border';
+
+%container {
+    &_small {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
