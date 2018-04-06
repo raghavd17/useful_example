@@ -1,0 +1,58 @@
+.c {
+    &-btn {
+        font-size: $font-size-base;
+        cursor: pointer;
+        @include border-radius(3px);
+        background: $primary-gray-light;
+        border-color: $primary-gray;
+        &:hover {
+            background: $primary-pink;
+            color: $white;
+            border-color: transparent;
+        }
+        &--white {
+            background: $white;
+        }
+        &--dark {
+            background: $primary-black;
+            color: $white !important;
+            border-color: transparent;
+            &:hover {
+                background: $white;
+                color: $primary-black !important;
+                border-color: $primary-black;
+            }
+        }
+        &--gray {
+            background: $primary-gray-dary;
+            color: $white !important;
+            border-color: transparent;
+            &:hover {
+                background: $primary-black;
+            }
+        }
+        &--checkout {
+            width: 100%;
+            background: $primary-pink;
+            color: $white !important;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            font-size: 16px;
+            border: 1px solid $primary-pink-dark;
+            &:hover {
+                background: $primary-pink-dark;
+                color: $white !important;
+            }
+        }
+        &__icon {
+            font-size: $font-size-18 !important;
+            padding: 0.15rem 0.75rem !important;
+            .icon {
+                vertical-align: -webkit-baseline-middle;
+            }
+        }
+        &--mw {
+            min-width: 124px;
+        }
+    }
+}

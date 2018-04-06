@@ -1,0 +1,31 @@
+input {
+    box-sizing: border-box;
+    background: $primary-gray-light;
+    border: 1px solid $primary-gray;
+    @include padding(2px 5px);
+    color: $primary-black;
+    &:focus {
+        outline: none;
+        border: 1px solid $primary-black;
+    }
+    &[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.c {
+    &-textbox {
+        box-sizing: border-box;
+        border: 1px solid $primary-gray !important ;
+        color: $primary-black !important;
+        border-radius: 3px !important;
+        &:focus {
+            outline: none;
+            border: 1px solid $primary-black !important;
+            box-shadow: none;
+        }
+    }
+}
+
+// custom checkbox

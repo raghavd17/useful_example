@@ -1,0 +1,15 @@
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+
+// Global styles are imported here
+// A custom reset file can be added to override normalize
+// Typography (h1-6, p, a, blockquote, etc.) should be included
+// Globally defined tags (body, main, article, div, etc.) should also be included
+//Import Base files
+//@import "normalise";
+@import "reboot";
+@import "c-icons";
+@import "typography";
+//Additonal Base Stylesheets

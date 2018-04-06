@@ -1,0 +1,238 @@
+// opacity mixin
+// Usage example:
+// .classname { //   @include opacity(0.8); // }
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//////////////////////////////////////////////////////////////////////
+// border-radius mixin
+// example usage :
+// .classname { @include border-radius(5px);}
+// .classname { @include border-top-radius(10px);}
+// .classname { @include border-right-radius(8px);}
+// .classname { @include border-bottom-radius(10px);}
+// .classname { @include border-left-radius (6px); }
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius; // background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+///////////////////////////////////////////////////
+// center block mixin
+// example usage :
+// .classname { width: 300px; @include center-block;}
+@mixin center-block {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+///////////////////////////////////////////////////
+// text ellipsis
+// example usage :
+// .classname {display:block; or display:inline-block; @include text-truncate; }
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// resetting padding
+@mixin reset-padding($val) {
+    @if $val==left {
+        padding-left: 0;
+    }
+    @if $val==right {
+        padding-right: 0;
+    }
+    @if $val==top {
+        padding-top: 0;
+    }
+    @if $val==bottom {
+        padding-bottom: 0;
+    }
+    @if $val==all {
+        padding: 0;
+    }
+}
+
+// resetting margin
+@mixin reset-margin($val) {
+    @if $val==left {
+        margin-left: 0;
+    }
+    @if $val==right {
+        margin-right: 0;
+    }
+    @if $val==top {
+        margin-top: 0;
+    }
+    @if $val==bottom {
+        margin-bottom: 0;
+    }
+    @if $val==all {
+        margin: 0;
+    }
+}
+
+// resetting border
+@mixin reset-border($val) {
+    @if $val==left {
+        border-left: 0px;
+    }
+    @if $val==right {
+        border-right: 0px;
+    }
+    @if $val==top {
+        border-top: 0px;
+    }
+    @if $val==bottom {
+        border-bottom: 0px;
+    }
+    @if $val==all {
+        border: 0px;
+    }
+}
+
+// Margin mix
+// usage exampele: .test { @include margin-top(10px);}
+@mixin margin($val) {
+    margin: $val;
+}
+
+// // .classname { @include pos-absolute(10px, 10px, 5px, 15px); } // top, right, bottom, Left
+// @mixin margin($top: auto, $right: auto, $bottom: auto, $left: auto) {
+//     margin-top: $top;
+//     margin-right: $right;
+//     margin-bottom: $bottom;
+//     margin-left: $left;
+// }
+@mixin margin-top($val) {
+    margin-top: $val;
+}
+
+@mixin margin-right($val) {
+    margin-right: $val;
+}
+
+@mixin margin-bottom($val) {
+    margin-bottom: $val;
+}
+
+@mixin margin-left($val) {
+    margin-left: $val;
+}
+
+//  Padding mixins
+// usage exampele: .test { @include padding-top(10px);}
+@mixin padding($val) {
+    padding: $val;
+}
+
+@mixin padding-top($val) {
+    padding-top: $val;
+}
+
+@mixin padding-right($val) {
+    padding-right: $val;
+}
+
+@mixin padding-bottom($val) {
+    padding-bottom: $val;
+}
+
+@mixin padding-left($val) {
+    padding-left: $val;
+}
+
+//  Border mixins
+// usage exampele: .test { @include border(width style color);}
+@mixin border($border) {
+    border: $border;
+}
+
+@mixin border-top($border) {
+    border-top: $border;
+}
+
+@mixin border-right($border) {
+    border-right: $border;
+}
+
+@mixin border-bottom($border) {
+    border-bottom: $border;
+}
+
+@mixin border-left($border) {
+    border-left: $border;
+}
+
+// mixin position absolute
+// example usage :
+// .classname { @include pos-absolute(10px, 10px, 5px, 15px); } // top, right, bottom, keft
+@mixin pos-absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+// .classname { @include pos-fixed(10px, 10px, 5px, 15px); } // top, right, bottom, keft
+@mixin pos-fixed ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: fixed;
+}
+
+//usage: @include transition([property],[duration],[easing]);
+@mixin transition($property: all, $duration: .3s, $ease: linear) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+}
