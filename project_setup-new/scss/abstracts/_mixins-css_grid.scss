@@ -1,0 +1,47 @@
+
+
+// ex: .classname { @include grid;}
+@mixin grid {
+    display: -ms-grid;
+    display: grid;
+  }
+  
+  // This is column mixins.
+  // para1: number of columns 
+  // para2: alignment 
+  // alignment : baseline, start, end, self-start, self-end, center, stretch
+  // ex: .classname { @include cols(12, end);}
+  @mixin cols($val, $align: stretch) {
+    width: 100%;
+    -ms-grid-columns: (1fr)[$val];
+    grid-template-columns: repeat($val, 1fr);
+    align-items:$align;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+  }
+  // col span mixin 
+  // ex: .classname { @include col-span(4);}
+  @mixin col-span ($value) {
+    grid-column: span $value;
+  }
+  
+  // This is row mixins.
+  // para1: number of rows 
+  // para2: alignment 
+  // alignment : baseline, start, end, self-start, self-end, center, stretch
+  // ex: .classname { @include row(12, end);}
+  @mixin rows($val, $align: stretch) {
+    width: 100%;
+    -ms-grid-rows: (1fr)[$val];
+    grid-template-rows: repeat($val, 1fr);
+    align-items:$align;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+  }
+  // col span mixin 
+  // ex: .classname { @include row-span(4);}
+  @mixin row-span ($value) {
+    grid-row: span $value;
+  }
+  
+  
