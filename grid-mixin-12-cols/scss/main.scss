@@ -1,0 +1,142 @@
+body {
+  margin-top: 50px;
+  font-family: 'Trebuchet MS', serif;
+  line-height: 1.6
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+// ex: .classname { @include grid;}
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+// This is column mixins.
+// para1: number of columns 
+// para2: alignment 
+// alignment : baseline, start, end, self-start, self-end, center, stretch
+// ex: .classname { @include cols(12, end);}
+@mixin cols($val, $align: stretch) {
+  width: 100%;
+  -ms-grid-columns: (1fr)[$val];
+  grid-template-columns: repeat($val, 1fr);
+  align-items:$align;
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+}
+// col span mixin 
+// ex: .classname { @include col-span(4);}
+@mixin col-span ($value) {
+  grid-column: span $value;
+}
+
+// This is row mixins.
+// para1: number of rows 
+// para2: alignment 
+// alignment : baseline, start, end, self-start, self-end, center, stretch
+// ex: .classname { @include row(12, end);}
+@mixin rows($val, $align: stretch) {
+  width: 100%;
+  -ms-grid-rows: (1fr)[$val];
+  grid-template-rows: repeat($val, 1fr);
+  align-items:$align;
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+}
+// col span mixin 
+// ex: .classname { @include row-span(4);}
+@mixin row-span ($value) {
+  grid-row: span $value;
+}
+
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+
+
+/// need to work on this 
+
+.grid {
+    @include grid;
+    grid-gap: 10px;
+    width: 100%;
+    @include cols(12, end);
+    grid-gap: 10px;
+}
+.auto-fill {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.grid-col-1 {
+  @include col-span(1);
+}
+.grid-col-2 {
+  @include col-span(2);
+}
+.grid-col-3 {
+  @include col-span(3);
+}
+.grid-col-4 {
+  @include col-span(4);
+}
+.grid-col-5 {
+  @include col-span(5);
+}
+.grid-col-6 {
+  @include col-span(6);
+}
+.grid-col-7 {
+  @include col-span(7);
+}
+.grid-col-8 {
+  @include col-span(8);
+}
+.grid-col-9 {
+  @include col-span(9);
+}
+.grid-col-10 {
+  @include col-span(10);
+}
+.grid-col-11 {
+  @include col-span(11);
+}
+.grid-col-12 {
+  @include col-span(12);
+}
+
+
+.item {
+  padding: 10px;
+	color:#fff;
+  background: violet;
+  text-align: center;		
+} // .item end 
+
+
+ 
+.compare {
+  @include grid;
+  @include cols(4);
+  > li.full {
+    @include col-span(2);
+  }
+}
+
+

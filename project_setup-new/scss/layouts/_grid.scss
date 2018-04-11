@@ -1,18 +1,19 @@
 // css grid 
 .d {
     &-grid {
-        display: grid;
+        @include grid;
     }
 }
 
 //example for grid 
 //https://codepen.io/raghavd17/pen/LeNVPK
 .grid {
-    display: grid;
+    @include grid;
     &--12 {
         grid-gap: 10px;
         width: 100%;
-        grid-template-columns: repeat(12, 1fr);
+        // grid-template-columns: repeat(12, 1fr);
+        @include cols(12, end);
     }
     &--auto-fill {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -20,42 +21,7 @@
     &--auto-fit {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     } // it will fit all the element in same row 
-    &-col-1 {
-        grid-column: span 1;
-    }
-    &-col-2 {
-        grid-column: span 2;
-    }
-    &-col-3 {
-        grid-column: span 3;
-    }
-    &-col-4 {
-        grid-column: span 4;
-    }
-    &-col-5 {
-        grid-column: span 5;
-    }
-    &-col-6 {
-        grid-column: span 6;
-    }
-    &-col-7 {
-        grid-column: span 7;
-    }
-    &-col-8 {
-        grid-column: span 8;
-    }
-    &-col-9 {
-        grid-column: span 9;
-    }
-    &-col-10 {
-        grid-column: span 10;
-    }
-    &-col-11 {
-        grid-column: span 11;
-    }
-    &-col-12 {
-        grid-column: span 12;
-    }
+    
 }
 
 .justify {
@@ -88,3 +54,66 @@
         }
     }
 }
+
+
+// new css for grid 
+
+/// need to work on this 
+
+.grid {
+    @include grid;
+    grid-gap: 10px;
+    width: 100%;
+    @include cols(12, end);
+    grid-gap: 10px;
+}
+.auto-fill {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.grid-col-1 {
+  @include col-span(1);
+}
+.grid-col-2 {
+  @include col-span(2);
+}
+.grid-col-3 {
+  @include col-span(3);
+}
+.grid-col-4 {
+  @include col-span(4);
+}
+.grid-col-5 {
+  @include col-span(5);
+}
+.grid-col-6 {
+  @include col-span(6);
+}
+.grid-col-7 {
+  @include col-span(7);
+}
+.grid-col-8 {
+  @include col-span(8);
+}
+.grid-col-9 {
+  @include col-span(9);
+}
+.grid-col-10 {
+  @include col-span(10);
+}
+.grid-col-11 {
+  @include col-span(11);
+}
+.grid-col-12 {
+  @include col-span(12);
+}
+
+.item {
+    padding: 10px;
+      color:#fff;
+    background: violet;
+    text-align: center;		
+  } // .item end 
+  
